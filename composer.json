@@ -2,7 +2,8 @@
   "name": "lyall/rails-test1",
   "type": "project",
   "require": {
-    "catfan/medoo": "^2.2"
+    "catfan/medoo": "^2.2",
+    "php": "^8.4"
   },
   "autoload": {
     "psr-4": {
@@ -16,6 +17,10 @@
     }
   ],
   "scripts": {
-    "start": "npm run build &&php -S localhost:8000 -t public"
+    "post-install-cmd": [
+      "npm install",
+      "npm run build"
+    ],
+    "start": "npm run build && php -S localhost:8000 -t public"
   }
 }
