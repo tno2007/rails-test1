@@ -18,8 +18,8 @@
   ],
   "scripts": {
     "post-install-cmd": [
-      "npm install",
-      "npm run build"
+      "cd vite && npm install",
+      "cd vite && npm run build"
     ],
     "start": "npm run build && php -S localhost:8000 -t public"
   }
