@@ -1,0 +1,10 @@
+[build]
+builder = "nixpacks"
+# Define a custom build command to install both PHP and Node.js dependencies
+buildCommand = "composer install && npm install && npm run build" 
+
+[deploy]
+# Specify the command to start your PHP application (e.g., using PHP-FPM and Nginx)
+startCommand = "php-fpm && nginx -g 'daemon off;'" 
+# Optional: Define a pre-deploy command for database migrations or other setup
+#preDeployCommand = ["php artisan migrate --force"] 
