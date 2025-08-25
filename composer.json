@@ -21,6 +21,6 @@
       "cd vite && npm install",
       "cd vite && npm run build"
     ],
-    "start": "npm run build && php -S localhost:8000 -t public"
+    "start": "npm run build && php -S localhost:8080 -t public"
   }
 }
